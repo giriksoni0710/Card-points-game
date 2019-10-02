@@ -13,8 +13,8 @@ public class DieView extends android.support.v7.widget.AppCompatImageView {
     {
         private int type, value;
         private String[] cardType = {"clubs", "spades", "diamonds", "hearts"};
-        private String[] cardValue = {"ace", "king", "queen", "jack", "ten",
-                "nine", "eight", "seven", "six", "five", "four", "three", "two"};
+        private String[] cardValue = {"ace", "two", "three", "four","five", "six", "seven", "eight",
+                "nine", "ten", "jack",  "queen","king"};
 
         public Card(int types, int values)
         {
@@ -55,7 +55,7 @@ public class DieView extends android.support.v7.widget.AppCompatImageView {
     }
 
     public void roll() {
-        value = (int) (Math.random() * 13);
+        value = (int) ((Math.random() * 13));
         type = (int) (Math.random()*4);
 
         draw = new Card(type,value);
@@ -72,6 +72,6 @@ public class DieView extends android.support.v7.widget.AppCompatImageView {
     }
 
     public int getValue() {
-        return value;
+        return value+1;
     }
 }

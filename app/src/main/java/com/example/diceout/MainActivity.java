@@ -6,6 +6,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -80,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
         int die1 = diceViews.get(0).getValue();
         int die2 = diceViews.get(1).getValue();
         int die3 = diceViews.get(2).getValue();
+
+        Log.d("die",""+die1);
 
         // Run the scoring logic to determine points scored for the roll
         if (die1 == die2 && die1 == die3) {
